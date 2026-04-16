@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuantumSense AI Business Builder</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Autonomous Venture Ops</p>
+        <h1>AI Business Builder Control Room</h1>
+        <p>
+          Orchestrate AI employees with <strong>Paperclip</strong>, optimize identities through
+          <strong>GStack</strong>, and run self-improving loops inspired by
+          <strong>Karpathy-style AutoResearch</strong>.
+        </p>
+        <div class="cta-row">
+          <button id="spawnTicketBtn">Spawn Priority Ticket</button>
+          <button id="optimizeBtn" class="secondary">Run Auto-Optimization Sweep</button>
+        </div>
+      </div>
+      <div class="score-panel glass">
+        <h2>Gamified KPIs</h2>
+        <ul>
+          <li><span>Business Level</span><strong id="levelValue">1</strong></li>
+          <li><span>Throughput</span><strong id="throughputValue">0</strong></li>
+          <li><span>Focus Score</span><strong id="focusValue">74</strong></li>
+          <li><span>Tickets Resolved</span><strong id="resolvedValue">0</strong></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <section class="glass visualizer">
+        <div class="panel-title">
+          <h2>3D-like Agent Swarm Visualizer</h2>
+          <p>Drag to rotate. Click agents to assign tickets.</p>
+        </div>
+        <canvas id="swarmCanvas" width="960" height="420" aria-label="Agent visualization"></canvas>
+      </section>
+
+      <section class="grid-two">
+        <article class="glass module">
+          <div class="panel-title">
+            <h3>Paperclip Orchestration + Ticketing</h3>
+            <p>Active async work queue</p>
+          </div>
+          <ul id="ticketList" class="ticket-list"></ul>
+        </article>
+
+        <article class="glass module">
+          <div class="panel-title">
+            <h3>GStack Business ID + Agents</h3>
+            <p>Optimal identity allocation and role fit</p>
+          </div>
+          <div id="agentCards" class="agent-cards"></div>
+        </article>
+      </section>
+
+      <section class="grid-two">
+        <article class="glass module">
+          <div class="panel-title">
+            <h3>Continuous Builder + Scheduler</h3>
+            <p>Timeboxed execution lane</p>
+          </div>
+          <div id="scheduleRail" class="schedule-rail"></div>
+          <div id="builderLog" class="log-stream"></div>
+        </article>
+
+        <article class="glass module">
+          <div class="panel-title">
+            <h3>Focus / Edit Setter</h3>
+            <p>Steer AI effort between explore and exploit</p>
+          </div>
+          <label for="focusSlider">Focus Mode</label>
+          <input id="focusSlider" type="range" min="0" max="100" value="74" />
+          <div class="focus-zones">
+            <span>Research</span>
+            <span>Balanced</span>
+            <span>Shipping</span>
+          </div>
+          <label class="toggle-row">
+            <input id="autoResearchToggle" type="checkbox" checked />
+            <span>Enable AutoResearch feedback loop</span>
+          </label>
+          <label class="toggle-row">
+            <input id="schedulerToggle" type="checkbox" checked />
+            <span>Enable autonomous scheduler</span>
+          </label>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
